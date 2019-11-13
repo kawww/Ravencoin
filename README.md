@@ -112,7 +112,7 @@ cd ../..
 
 tar xvzf /sdcard/Termux-Backup.tgz
 
-
+exit
 
 Raven Core integration/staging tree
 =====================================
