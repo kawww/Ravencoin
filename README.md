@@ -1,3 +1,69 @@
+Test Ravencoin full node on Android.
+
+1. Install Termux app and open it. (https://f-droid.org/packages/com.termux/)
+2. Install proot and wget.
+
+pkg i -y proot wget
+termux-chroot
+
+3. Install ubuntu 
+
+mkdir ubuntu
+cd ubuntu
+wget https://raw.githubusercontent.com/Neo-Oli/termux-ubuntu/master/ubuntu.sh
+bash ubuntu.sh
+./start-ubuntu.sh
+
+4. Update and install aarch ravencoin clint for test termux
+
+apt-get update && apt-get -y upgrade
+cd /home
+apt-get install wget -y
+wget https://github.com/kawww/Ravencoin/releases/download/2.5.1/raven-2.5.1-aarch64-linux-gnu.tar.gz
+
+5. If you want to use official client, please compile build by yourself or wait offical aarch client.
+
+6. unzip and run node
+
+tar xzvf raven-2.5.1-aarch64-linux-gnu.tar.gz
+cd raven-2.5.1
+cd bin
+./ravend -daemon
+./raven-cli -getinfo
+
+
+----------------
+
+
+if you want to test Galaxy
+
+./raven-cli stop
+apt-get install vim -y
+vim /root/.raven/raven.conf
+
+rpcuser=one
+rpcpassword=rvn
+rpcport=2222
+server=1
+assetindex=1
+addressindex=1
+rpcallowip=127.0.0.1
+whitelist=127.0.0.1
+
+1.input :wq ,then press enter to save
+
+./ravend -daemon -reindex
+
+2.open a new session in termux (slide screen from left to middle)
+
+pkg i -y php git
+git clone https://github.com/kawww/Galaxy.git
+php -S 127.0.0.1:8080 -t Galaxy
+
+3.Now you can use localhost:8080 or 127.0.0.1:8080 to open GalaxyOS for Ravencoin.
+
+ref:https://blog.bitcoinprivacy.net/2019/05/25/ive-built-the-worlds-cheapest-bitcoin-node-and-so-can-you/
+
 Raven Core integration/staging tree
 =====================================
 
