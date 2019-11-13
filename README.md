@@ -31,7 +31,7 @@ apt-get install wget -y
 wget https://github.com/kawww/Ravencoin/releases/download/2.5.1/raven-2.5.1-aarch64-linux-gnu.tar.gz
 
 
-5. If you want to use official client, please compile build by yourself or wait offical aarch client.
+5. If you want to use official client, please compile build by yourself or wait offical aarch client. (https://github.com/RavenProject/Ravencoin/blob/master/static-builds/staticbuild.md#static-linux-aarch64-builds)
 
 6. unzip and run node
 
