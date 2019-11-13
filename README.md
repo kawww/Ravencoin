@@ -94,6 +94,26 @@ php -S 127.0.0.1:8080 -t Galaxy
 
 ref:https://blog.bitcoinprivacy.net/2019/05/25/ive-built-the-worlds-cheapest-bitcoin-node-and-so-can-you/
 
+4.backup
+
+termux-setup-storage
+
+cd ../..
+
+tar cvzf /sdcard/Termux-Backup.tgz ./
+
+
+And to restore on a brand new install, open and
+
+
+termux-setup-storage
+
+cd ../..
+
+tar xvzf /sdcard/Termux-Backup.tgz
+
+
+
 Raven Core integration/staging tree
 =====================================
 
