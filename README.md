@@ -1,6 +1,6 @@
 Test Ravencoin full node on Android.
 
-1. Install Termux app and open it. (https://f-droid.org/packages/com.termux/)
+1. Install Termux app and open it. (Google pley. Don't download from f-droid right now, apt-get problem in ubuntu))
 2. Install proot and wget.
 
 pkg i -y proot wget
