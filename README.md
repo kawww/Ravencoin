@@ -94,6 +94,51 @@ php -S 127.0.0.1:8080 -t Galaxy
 
 ref:https://blog.bitcoinprivacy.net/2019/05/25/ive-built-the-worlds-cheapest-bitcoin-node-and-so-can-you/
 
+----------------
+
+apache
+
+pkg i apache2 -y
+
+cd /data/data/com.termux/files/usr/etc/apache2
+
+cp httpd.conf httpd.conf.bak
+
+grep -v "#" httpd.conf.bak > httpd.conf
+
+vi httpd.conf
+
+add at bottom    ServerName 127.0.0.1:8080
+allowoverride None change All
+
+save
+
+httpd
+
+open 127.0.0.1:8080
+
+kill pid or pkill httpd
+
+httpd -s reload
+
+httpd -s stop
+
+----------------
+
+nginx
+
+
+pkg i nginx -y  
+
+nginx
+
+open 127.0.0.1:8080
+
+/data/data/com.termux/files/usr/share/nginx/html/index.html 
+
+————————————————
+
+
 4.backup to sdcard
 
 termux-setup-storage
@@ -114,6 +159,7 @@ tar xvzf /sdcard/Termux-Backup.tgz
 
 exit
 
+----------------
 
 ftp
 
