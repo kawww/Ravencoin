@@ -114,6 +114,12 @@ tar xvzf /sdcard/Termux-Backup.tgz
 
 exit
 
+
+ftp
+
+$tcpsvd -vE 0.0.0.0 2121 ftpd /sdcard
+
+
 Raven Core integration/staging tree
 =====================================
 
