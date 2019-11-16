@@ -117,7 +117,8 @@ exit
 
 ftp
 
-$tcpsvd -vE 0.0.0.0 2121 ftpd /sdcard
+tcpsvd -vE 0.0.0.0 2121 ftpd -w
+
 
 
 Raven Core integration/staging tree
