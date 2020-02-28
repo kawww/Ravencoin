@@ -58,11 +58,11 @@ apt-get install vim -y
 vim /root/.raven/raven.conf
 
 
-rpcuser=one
+rpcuser=galaxy
 
-rpcpassword=rvn
+rpcpassword=frontier
 
-rpcport=2222
+rpcport=1025
 
 server=1
 
